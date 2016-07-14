@@ -100,7 +100,7 @@ static DKRSAEncryptor *rsaEncryptor = nil;
         return nil;
     }
     
-    NSDate *publicKeyFileContent = [NSData dataWithContentsOfFile:publicKeyPath];
+    NSData *publicKeyFileContent = [NSData dataWithContentsOfFile:publicKeyPath];
     if (publicKeyFileContent == nil) {
         NSLog(@"Can not read from public_key.der");
         return nil;
@@ -115,14 +115,14 @@ static DKRSAEncryptor *rsaEncryptor = nil;
     policy = SecPolicyCreateBasicX509();
     OSStatus returnCode = SecTrustCreateWithCertificates(certificate, policy, &trust);
     if (returnCode != 0) {
-        NSLog(@"SecTrustCreateWithCertificates fail. Error Code: %ld", returnCode);
+        
         return nil;
     }
     
     SecTrustResultType trustResultType;
     returnCode = SecTrustEvaluate(trust, &trustResultType);
     if (returnCode != 0) {
-        NSLog(@"SecTrustEvaluate fail. Error Code: %ld", returnCode);
+        
         return nil;
     }
     
@@ -156,7 +156,7 @@ static DKRSAEncryptor *rsaEncryptor = nil;
     
     NSData *result = nil;
     if (returnCode != 0) {
-        NSLog(@"SecKeyEncrypt fail. Error Code: %ld", returnCode);
+        
     }
     else {
         result = [NSData dataWithBytes:cipher
