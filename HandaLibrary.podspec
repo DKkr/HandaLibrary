@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HandaLibrary'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Library for Handasoft Corp.'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/DKkr/HandaLibrary'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'dduk02' => 'dduk02@handasoft.co.kr' }
+  #s.author           = { 'dduk02' => 'dduk02@handasoft.co.kr' }
   s.source           = { :git => 'https://github.com/DKkr/HandaLibrary.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
